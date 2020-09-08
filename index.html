@@ -5,21 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" href="./css/all.min.css"/>
-    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
-    <link rel="stylesheet"href="./css/mdb.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/mdb.min.css" />
 </head>
 
 <body>
-    <div>
-        <div class="md-form form-lg wrapper">
-            <input name="fullUrl" type="text" class="form-control form-control-lg">
-            <label for="fullUrl">Enter Password</label>
-        </div>
-        <div class="toggle-password">
-            <i class="fa fa-eye"></i>
-            <i class="fa fa-eye-slash"></i>
+    <div class="form">
+        <div class="form-element">
+            <div class="md-form form-lg wrapper">
+                <input id="password-field" name="fullUrl" type="password" class="form-control form-control-lg">
+                <label for="fullUrl">Enter Password</label>
+            </div>
+            <div class="toggle-password">
+                <i class="fa fa-eye" onclick="toggleEye()"></i>
+                <!-- <i style="display: none;" class="fa fa-eye-slash"></i> -->
+            </div>
+            <div class="password-policies">
+                <div class="policy-length">
+                    8 characters
+                </div>
+                <div class="policy-number">
+                    Contains Number
+                </div>
+                <div class="policy-uppercase">
+                    Contains Uppercase`
+                </div>
+                <div class="policy-special">
+                    Contains Special Characters
+                </div>
+            </div>
         </div>
     </div>
     <button class="btn" type="button" onclick="showGenerate()">
@@ -71,7 +87,7 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/mdb.min.js"></script>
-    <script src="./js/all.min.js" ></script>
+    <script src="./js/all.min.js"></script>
 </body>
 
 </html>

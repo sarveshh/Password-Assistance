@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Assistant</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/mdb.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 
 <body>
     <div class="form">
         <div class="form-element">
-            <div class="md-form form-lg wrapper">
+            <div class="md-form form-lg wrapper" id="pwd-container">
                 <input id="password-field" name="fullUrl" type="password" class="form-control form-control-lg">
                 <label for="fullUrl">Enter Password</label>
+                <div id="pw-progressbar" style="margin-top:10px;"></div>
             </div>
-            <div class="toggle-password">
-                <i class="fa fa-eye" onclick="toggleEye()"></i>
+            <div class="toggle-password" id="eye-button">
+                <i class="fa fa-eye"></i>
                 <!-- <i style="display: none;" class="fa fa-eye-slash"></i> -->
             </div>
+            
             <div class="password-policies">
                 <div class="policy-length">
                     8 characters
@@ -36,6 +39,10 @@
                     Contains Special Characters
                 </div>
             </div>
+            <button class="btn use-keyboard-input" style="font-size:10px!important;">
+                Open virtual keyboard
+                Stay safe from keyloggers!
+            </button>
         </div>
     </div>
     <button class="btn" type="button" onclick="showGenerate()">
@@ -88,6 +95,10 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/mdb.min.js"></script>
     <script src="./js/all.min.js"></script>
+    <script src="./js/pwstrength-bootstrap.js"></script>
+    <script type="text/javascript">
+        var ps = new PasswordStrength('#pwd-container', '#pw-progressbar', '#password-field')
+    </script>
 </body>
 
 </html>

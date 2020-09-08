@@ -126,18 +126,18 @@ _id("password-field").addEventListener("keyup", function () {
 });
 
 
-var PasswordStrength = function(container, progressbar, password){
+var PasswordStrength = function (container, progressbar, password) {
   this.options = {};
   this.passwordTxt = $(password);
   this.container = container;
   this.progressbar = progressbar;
   this._setStrength();
 }
-PasswordStrength.prototype._setStrength = function(){
+PasswordStrength.prototype._setStrength = function () {
   var self = this;
   this.options.ui = {
     container: this.container,
-    showVerdictsInsideProgressBar:true,
+    showVerdictsInsideProgressBar: true,
     viewports: {
       progress: this.progressbar
     }
@@ -184,11 +184,17 @@ const Keyboard = {
     document.body.appendChild(this.elements.main);
 
     // Automatically use keyboard for elements with .use-keyboard-input
-  // $('.use-keyboard-input').addEventListener("click", function(){
-    
-  // })
     document.querySelectorAll(".use-keyboard-input").forEach((element) => {
       element.addEventListener("focus", () => {
+        this.open(element.value, (currentValue) => {
+          element.value = currentValue;
+        });
+      });
+    });
+    document.querySelectorAll(".use-keyboard-input-button").forEach((element) => {
+      element.addEventListener("click", () => {
+        $('.wrapper').addClass('use-keyboard-input');
+        $('#password-field').focus();
         this.open(element.value, (currentValue) => {
           element.value = currentValue;
         });

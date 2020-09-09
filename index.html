@@ -15,9 +15,9 @@
 <body>
     <div class="form">
         <div class="form-element">
-            <div class="md-form form-lg wrapper" id="pwd-container">
-                <input id="password-field" name="fullUrl" type="password" class="form-control form-control-lg">
-                <label for="fullUrl">Enter Password</label>
+            <div class="wrapper" id="pwd-container">
+                <!-- <label for="fullUrl">Enter Password</label> -->
+                <input placeholder="Enter Password" id="password-field" name="fullUrl" type="password" class="use-keyboard-input form-control form-control-lg"></input>      
                 <div id="pw-progressbar" style="margin-top:10px;"></div>
             </div>
             <div class="toggle-password" id="eye-button">
@@ -39,13 +39,12 @@
                     Contains Special Characters
                 </div>
             </div>
-
-            <button class="btn use-keyboard-input-button" style="font-size:10px!important;">
-                Open virtual keyboard
-                Stay safe from keyloggers!
-            </button>
         </div>
     </div>
+    <!-- <button class="btn use-keyboard-input-button" type="button" style="font-size:10px!important;">
+        Open virtual keyboard
+        Stay safe from keyloggers!
+    </button> -->
     <button class="btn" type="button" onclick="showGenerate()">
         or Generate one
     </button>

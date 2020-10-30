@@ -1,5 +1,7 @@
 # Password-Assistant
 
+A live demo can be seen at https://sarveshh.github.io/Password-Assistant/
+
 Normally you need a user to input password, but building tools for password input is tedious, I would admit.<br/> This project concentrates on making that task easier for developers.<br/> 
 
 ## Features
